@@ -23,7 +23,7 @@ public class EmployeeService {
 
     public Employee getEmployeeById(Long Id)
     {
-        return repository.findById(Id).orElseThrow(()->new RuntimeException("Employee not found"));
+        return repository.findById(Id).orElseThrow(()->new RuntimeException("Employee with Id "+ Id +" found"));
     }
     public Employee createEmployee(Employee emp)
     {
